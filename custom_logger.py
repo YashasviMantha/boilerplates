@@ -33,12 +33,15 @@ def get_module_logger(mod_name):
         logger = get_module_logger(__name__)
     """
     logger = logging.getLogger(mod_name)
-    handler = logging.StreamHandler()
     # formatter = logging.Formatter(
     #     '%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
     # handler.setFormatter(formatter)
-
-    handler.setFormatter(CustomFormatter())
-    logger.addHandler(handler)
+    # print(len(logger.handlers))
+    
+    # check if there is a handeler already present. If not then add. Fixes multiple logging of the same message in context of streamlit stuff. 
+    if (sum([isinstance(handler, logging.StreamHandler) for handler in logger.handlers]) == 0):
+        handler = logging.StreamHandler()
+        handler.setFormatter(CustomFormatter())
+        logger.addHandler(handler)
     logger.setLevel(logging.DEBUG)
     return logger
