@@ -12,3 +12,4 @@ project_secrets.py
 
 /raw_data/
 .gitignore
+*/.cache/*
