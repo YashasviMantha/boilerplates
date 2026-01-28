@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Debug streamlit App",
+            "type": "python",
+            "request": "launch",
+            // Path to your streamlit installation, usually inside virtual env.
+            "program": "/Users/USER/.pyenv/versions/VIRTUALENV/bin/streamlit",
+            // Path to python you are using, usually inside virtual env.
+            "cwd": "${workspaceFolder}/ui/",
+            "python": "/Users/USER/.pyenv/versions/VIRTUALENV/bin/python",
+            "args": [
+                "run",
+                "FILENAME",
+            ],
+        }
+    ]
+}
