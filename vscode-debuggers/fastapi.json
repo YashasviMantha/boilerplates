@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Python: FastAPI",
+            "type": "debugpy",
+            "cwd": "${workspaceFolder}/api/",
+            "request": "launch",
+            "program": "VIRTUALENV/bin/fastapi",
+            "args": ["dev", "api.py", "--port", "8005"],
+        }
+    ]
+}
