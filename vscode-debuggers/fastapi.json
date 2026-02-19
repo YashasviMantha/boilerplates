@@ -6,6 +6,7 @@
             "cwd": "${workspaceFolder}/api/",
             "request": "launch",
             "program": "VIRTUALENV/bin/fastapi",
+            "python": "VIRTUALENV/bin/python",
             "args": ["dev", "api.py", "--port", "8005"],
         }
     ]
