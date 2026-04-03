@@ -1,15 +1,15 @@
 all: build run
 
 build:
-        docker build -t dockerimg .
+        docker build -t naradabotimg .
 
 run:
-        docker run --name dockercont -p 8000:8000 dockerimg
+        docker run --name naradabotcont naradabotimg
 
 runold:
-        docker container start dockercont
+        docker container start naradabotcont
 stop:
-        docker stop dockercont
+        docker stop naradabotcont
 
 clean:
-        docker rm dockercont
+        docker rm naradabotcont
