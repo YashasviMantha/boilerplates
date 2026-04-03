@@ -1,0 +1,15 @@
+all: build run
+
+build:
+        docker build -t dockerimg .
+
+run:
+        docker run --name dockercont -p 8000:8000 dockerimg
+
+runold:
+        docker container start dockercont
+stop:
+        docker stop dockercont
+
+clean:
+        docker rm dockercont
