@@ -1,3 +1,11 @@
+: '
+run this for execution
+curl https://raw.githubusercontent.com/YashasviMantha/boilerplates/refs/heads/main/python-init-proj.sh >> init.sh 
+chmod +x init.sh
+./init.sh
+rm ./init.sh
+'
+
 touch readme.txt
 # mkdir readme.md
 
